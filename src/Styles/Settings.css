@@ -1,0 +1,105 @@
+.settings-parent {
+  width: 100%;
+}
+.settings {
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.setting {
+  flex: 0 auto;
+  width: auto;
+  background: #86d76b;
+  margin: 7px;
+  padding: 10px;
+  border-radius: 10px;
+}
+@media screen and (min-width: 650px) {
+  .setting {
+    width: 48%;
+  }
+  .settings {
+    height: 100vh;
+    min-height: 100vh;
+  }
+}
+.setting h5 {
+  margin-bottom: 5px;
+}
+.change-photo-title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  margin-top: 10px;
+  background: #6cc058;
+  border-radius: 5px;
+}
+.image-drop-down {
+  background: #5ca34b;
+  position: absolute;
+  width: 97.5%;
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  top: 100%;
+  padding: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: all 0.2s ease-in;
+  box-shadow: inset 0px 6px 10px -9px #000, 0px 5px 8px -3px #000;
+}
+.show-image {
+  padding: 5px;
+  max-height: 300px;
+  transition: all 0.2s ease-in;
+}
+.user-images {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  object-fit: cover;
+}
+.file-box {
+  display: flex;
+  padding: 5px;
+}
+.file-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.file-name h6 {
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 70%;
+  overflow: hidden;
+}
+#file {
+  display: none;
+  width: 50%;
+  cursor: pointer;
+  color: transparent;
+  border: none;
+}
+.buttons {
+  height: 30px;
+  padding: 0 7px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  justify-content: center;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #79db60;
+  transition: all 0.2s linear;
+}
+.buttons:active {
+  transform: scale(0.95);
+}

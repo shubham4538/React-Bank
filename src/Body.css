@@ -1,0 +1,149 @@
+.account-page {
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+  width: 100%;
+  padding: 10px;
+  gap: 10px;
+}
+.personal-info {
+  display: flex;
+  background: linear-gradient(186deg, #85ff5c, #2acc62);
+  box-shadow: 4px 4px 7px -3px, inset 4px 4px 5px -5px white;
+  align-self: stretch;
+  padding: 10px;
+  width: 70%;
+  justify-content: space-between;
+}
+.personal-info .userdp {
+  width: 60px;
+  height: 60px;
+}
+.account-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+  gap: 10px;
+  height: 100%;
+}
+.personal-info,
+.account-info * {
+  border-radius: 5px;
+}
+.account-info a {
+  width: 100%;
+  flex: 1;
+}
+.transactions,
+.transfer,
+.amount {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(186deg, #85ff5c, #2acc62);
+  box-shadow: 4px 4px 7px -3px, inset 5px 5px 5px -5px white;
+  transition: 0.2s all linear;
+}
+.transactions:hover,
+.transfer:hover,
+.amount:hover {
+  transform: scale(1.01);
+  transition: 0.1s all linear;
+}
+
+.transaction-scroll {
+  width: 80%;
+}
+.transaction-box {
+  margin: 10px;
+  background: #f3fff3;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.transaction {
+  border-bottom: 1px solid;
+  border-image: radial-gradient(
+    circle at 50% -5px,
+    rgb(36, 36, 36) 100px,
+    transparent
+  );
+  border-image-slice: 1;
+  padding: 6px 10px;
+  justify-content: space-between;
+}
+.transaction:first-child {
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+  border: none;
+}
+.transaction:last-child {
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+.transaction,
+.trans-left {
+  display: flex;
+}
+.trans-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5px;
+}
+.trans-account {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+.trans-name {
+  line-height: 18px;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+.trans-right {
+  align-self: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+.back-to {
+  background: linear-gradient(270deg, #ff877a -226px, transparent 275px);
+}
+.back-from {
+  background: linear-gradient(270deg, #8eff7a -226px, transparent 275px);
+}
+.to {
+  color: #b70000;
+}
+.from {
+  color: #007100;
+}
+
+@media (max-width: 450px) {
+  .personal-info {
+    flex-direction: column;
+  }
+  .personal-info,
+  .personal-info * {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  .account-info {
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .account-page {
+    flex-direction: column;
+  }
+  .account-page > * {
+    width: 100%;
+  }
+  .account-info {
+    flex-direction: row;
+  }
+}
