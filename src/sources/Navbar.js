@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import "../Styles/Navbar.css";
 import Sidebar from "./Sidebar";
 import { ImageContext } from "../App";
+import logo from "../../public/logo.png";
 
 function Navbar({ userDetails, isValid }) {
   const [sidebar, setSidebar] = useState(false);
@@ -45,7 +46,7 @@ function Navbar({ userDetails, isValid }) {
         <div className={sidebar ? "side-back back" : "side-back"}></div>
       </div>
       <nav className="navigation-bar">
-        <img src="/logo.png" className="logo" alt="" />
+        <img src={logo} className="logo" alt="" />
         <h4 style={{ color: "#fff" }}>
           {currentLink.includes("/Home")
             ? "Home"
