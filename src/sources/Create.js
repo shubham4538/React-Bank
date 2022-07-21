@@ -42,7 +42,7 @@ function Create() {
   useEffect(() => {
     Axios.get("https://bank-react.herokuapp.com/transactTo").then((res) => {
       console.log(res.data);
-      const dummyData = res.data.map((data) => {
+      const dummyData = res.data?.map((data) => {
         return data.acc_no;
       });
       setAccountNumbers(dummyData);

@@ -24,6 +24,11 @@ function Main() {
         >
           <div className="account">
             <h1>Already Logged In !!!</h1>
+            <Link to="/Home">
+              <div>
+                Welcome <i className="far fa-arrow-right"></i>{" "}
+              </div>
+            </Link>
           </div>
         </div>
       </>

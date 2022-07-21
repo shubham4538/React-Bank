@@ -35,7 +35,7 @@ function Transfer() {
     resolver: yupResolver(schema),
   });
 
-  const dummyData = userData.filter((data) => {
+  const dummyData = userData?.filter((data) => {
     if (data.acc_no !== userDetails.acc_no) {
       data.acc_no = parseInt(data.acc_no);
       return data;
@@ -82,7 +82,7 @@ function Transfer() {
                   <option hidden value="">
                     Select
                   </option>
-                  {dummyData.map((value, key) => {
+                  {dummyData?.map((value, key) => {
                     return (
                       <option key={key} value={value.acc_no}>
                         {value.acc_no}
