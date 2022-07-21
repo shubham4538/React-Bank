@@ -1,14 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-
 import "../Styles/bootstrap.css";
 import "../Styles/bootstrap-icons.css";
 import "../Styles/fontawesome-icons.css";
 import "../App.css";
 import "../Body.css";
 import "../Styles/Settings.css";
-
-import Navbar from "./Navbar";
 import { LoginContext, DetailsContext } from "../App";
 
 function Main() {

@@ -27,7 +27,7 @@ function App() {
 
   useEffect(() => {
     if (username !== null) {
-      Axios.post("https://react-bank-postgres.herokuapp.com/userDetails", {
+      Axios.post("https://bank-react.herokuapp.com/userDetails", {
         username: username,
       }).then((res) => {
         if (res.data.err) {
